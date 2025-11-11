@@ -1,0 +1,66 @@
+﻿<Window x:Class="MatchFour.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatchFour"
+        xmlns:userControlls="clr-namespace:MatchFour.UserControlls"
+        mc:Ignorable="d"
+        Title="Match Four" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="43*"/>
+                <RowDefinition Height="379*"/>
+                <RowDefinition Height="12*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="77*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Grid.Row="1" Click="CallPython"/>
+            <Grid Name="TopLine" Grid.Row="0" Grid.Column="1" ShowGridLines="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#FFB11717">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <userControlls:InsertButton Grid.Row="0" Grid.Column="0" SelectRow="ClickOnCol" HandleRow="0"/>
+                <userControlls:InsertButton Grid.Row="0" Grid.Column="1" SelectRow="ClickOnCol" HandleRow="1"/>
+                <userControlls:InsertButton Grid.Row="0" Grid.Column="2" SelectRow="ClickOnCol" HandleRow="2"/>
+                <userControlls:InsertButton Grid.Row="0" Grid.Column="3" SelectRow="ClickOnCol" HandleRow="3"/>
+                <userControlls:InsertButton Grid.Row="0" Grid.Column="4" SelectRow="ClickOnCol" HandleRow="4"/>
+                <userControlls:InsertButton Grid.Row="0" Grid.Column="5" SelectRow="ClickOnCol" HandleRow="5"/>
+                <userControlls:InsertButton Grid.Row="0" Grid.Column="6" SelectRow="ClickOnCol" HandleRow="6"/>
+            </Grid>
+
+            <Rectangle Fill="#FF115696" Grid.ColumnSpan="3" Margin="82,43,82,0" Grid.RowSpan="2"/>
+            <Grid Name="Field" RenderTransformOrigin="0.483,0.501" Margin="82,10,82,2" Grid.Row="1" Grid.ColumnSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
