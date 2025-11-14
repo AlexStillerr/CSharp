@@ -1,0 +1,205 @@
+{
+  "quizTitle": "C# – Design Patterns (Erzeugungs-, Struktur- und Verhaltensmuster)",
+  "questions": [
+    {
+      "question": "Was ist das Hauptziel von Design Patterns in der Softwareentwicklung?",
+      "answers": [
+        {"text": "Wiederverwendung bewährter Lösungen für häufige Entwurfsprobleme.", "isCorrect": true},
+        {"text": "Verbesserung der Lesbarkeit und Wartbarkeit von Code.", "isCorrect": true},
+        {"text": "Ersetzung der objektorientierten Programmierung.", "isCorrect": false},
+        {"text": "Automatische Codegenerierung durch Compiler.", "isCorrect": false},
+        {"text": "Reduzierung der Anzahl von Klassen im Projekt.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern sorgt dafür, dass nur eine einzige Instanz einer Klasse existiert?",
+      "answers": [
+        {"text": "Singleton", "isCorrect": true},
+        {"text": "Factory Method", "isCorrect": false},
+        {"text": "Prototype", "isCorrect": false},
+        {"text": "Builder", "isCorrect": false},
+        {"text": "Adapter", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Problem löst das Factory Method Pattern?",
+      "answers": [
+        {"text": "Erstellung von Objekten ohne Angabe der konkreten Klasse.", "isCorrect": true},
+        {"text": "Erzwingt die Verwendung einer einzelnen Instanz.", "isCorrect": false},
+        {"text": "Erlaubt Laufzeit-Austausch von Objekterstellungslogik.", "isCorrect": true},
+        {"text": "Verhindert die Mehrfachvererbung.", "isCorrect": false},
+        {"text": "Sorgt für objektübergreifende Synchronisierung.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern kapselt die Erstellung komplexer Objekte Schritt für Schritt?",
+      "answers": [
+        {"text": "Builder", "isCorrect": true},
+        {"text": "Prototype", "isCorrect": false},
+        {"text": "Factory Method", "isCorrect": false},
+        {"text": "Singleton", "isCorrect": false},
+        {"text": "Flyweight", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Wofür steht das Dependency Injection Prinzip häufig im Zusammenhang mit Patterns?",
+      "answers": [
+        {"text": "Es trennt Objekt-Erstellung von deren Verwendung.", "isCorrect": true},
+        {"text": "Es wird oft durch das Inversion of Control (IoC) Pattern umgesetzt.", "isCorrect": true},
+        {"text": "Es ist ein Teil des Singleton-Patterns.", "isCorrect": false},
+        {"text": "Es sorgt für lose Kopplung zwischen Komponenten.", "isCorrect": true},
+        {"text": "Es verhindert Polymorphismus.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht das Kopieren existierender Objekte ohne deren genaue Klassen zu kennen?",
+      "answers": [
+        {"text": "Prototype", "isCorrect": true},
+        {"text": "Factory", "isCorrect": false},
+        {"text": "Builder", "isCorrect": false},
+        {"text": "Decorator", "isCorrect": false},
+        {"text": "Adapter", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Strukturmuster erlaubt das Hinzufügen von Funktionalität zu Objekten zur Laufzeit?",
+      "answers": [
+        {"text": "Decorator", "isCorrect": true},
+        {"text": "Adapter", "isCorrect": false},
+        {"text": "Proxy", "isCorrect": false},
+        {"text": "Composite", "isCorrect": false},
+        {"text": "Bridge", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern sorgt dafür, dass inkompatible Schnittstellen zusammenarbeiten können?",
+      "answers": [
+        {"text": "Adapter", "isCorrect": true},
+        {"text": "Bridge", "isCorrect": false},
+        {"text": "Proxy", "isCorrect": false},
+        {"text": "Decorator", "isCorrect": false},
+        {"text": "Facade", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was ist der Hauptunterschied zwischen Adapter und Bridge?",
+      "answers": [
+        {"text": "Adapter verbindet inkompatible Klassen, Bridge trennt Abstraktion und Implementierung.", "isCorrect": true},
+        {"text": "Bridge verändert das Verhalten zur Laufzeit, Adapter nicht.", "isCorrect": false},
+        {"text": "Adapter arbeitet zur Laufzeit, Bridge zur Kompilierzeit.", "isCorrect": false},
+        {"text": "Beide lösen dasselbe Problem.", "isCorrect": false},
+        {"text": "Bridge ist kein strukturelles Pattern.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern stellt eine vereinfachte Schnittstelle zu einem komplexen Subsystem bereit?",
+      "answers": [
+        {"text": "Facade", "isCorrect": true},
+        {"text": "Adapter", "isCorrect": false},
+        {"text": "Bridge", "isCorrect": false},
+        {"text": "Proxy", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern steuert den Zugriff auf ein Objekt und kann zusätzliche Funktionalität bereitstellen?",
+      "answers": [
+        {"text": "Proxy", "isCorrect": true},
+        {"text": "Adapter", "isCorrect": false},
+        {"text": "Composite", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false},
+        {"text": "Decorator", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Verhaltensmuster definiert eine Familie von Algorithmen und kapselt sie einzeln?",
+      "answers": [
+        {"text": "Strategy", "isCorrect": true},
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "State", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern wird oft für Ereignisbenachrichtigungen (z. B. GUI-Events) verwendet?",
+      "answers": [
+        {"text": "Observer", "isCorrect": true},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was ist der Hauptzweck des Command-Patterns?",
+      "answers": [
+        {"text": "Kapselung einer Aktion oder eines Befehls als Objekt.", "isCorrect": true},
+        {"text": "Ermöglicht Undo- und Redo-Funktionalität.", "isCorrect": true},
+        {"text": "Verbindet Klassen mit unterschiedlichen Schnittstellen.", "isCorrect": false},
+        {"text": "Reduziert die Anzahl der Objekte im System.", "isCorrect": false},
+        {"text": "Erzwingt Singleton-Verhalten.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht es Objekten, ihren Zustand zu ändern, wenn sich ihr interner Status ändert?",
+      "answers": [
+        {"text": "State", "isCorrect": true},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern reduziert Abhängigkeiten zwischen Objekten, indem es die Kommunikation über ein Vermittlerobjekt leitet?",
+      "answers": [
+        {"text": "Mediator", "isCorrect": true},
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Chain of Responsibility", "isCorrect": false},
+        {"text": "Proxy", "isCorrect": false},
+        {"text": "Adapter", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht es, eine Kette von Handlern zu durchlaufen, bis einer den Request bearbeitet?",
+      "answers": [
+        {"text": "Chain of Responsibility", "isCorrect": true},
+        {"text": "Mediator", "isCorrect": false},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Command", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht das Hinzufügen neuer Operationen zu bestehenden Klassen, ohne diese zu verändern?",
+      "answers": [
+        {"text": "Visitor", "isCorrect": true},
+        {"text": "Decorator", "isCorrect": false},
+        {"text": "Adapter", "isCorrect": false},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Bridge", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was beschreibt das Template Method Pattern?",
+      "answers": [
+        {"text": "Es definiert das Grundgerüst eines Algorithmus und lässt Unterklassen einzelne Schritte überschreiben.", "isCorrect": true},
+        {"text": "Es erstellt Objekte auf Basis von Vorlagen.", "isCorrect": false},
+        {"text": "Es ersetzt Vererbung durch Komposition.", "isCorrect": false},
+        {"text": "Es sorgt für polymorphe Objektklone.", "isCorrect": false},
+        {"text": "Es wird nur in der GUI-Programmierung verwendet.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern wird oft verwendet, um teure Objekterstellungen zu vermeiden und Ressourcen zu teilen?",
+      "answers": [
+        {"text": "Flyweight", "isCorrect": true},
+        {"text": "Prototype", "isCorrect": false},
+        {"text": "Singleton", "isCorrect": false},
+        {"text": "Builder", "isCorrect": false},
+        {"text": "Proxy", "isCorrect": false}
+      ]
+    }
+  ]
+}
