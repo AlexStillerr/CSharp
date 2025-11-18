@@ -7,17 +7,18 @@ namespace Quiz
     /*
      TODO:
     - Category selection?
-    - Antworten shuffeln
-    + Show answer result
-    - Random selection der Antworten möglichkeiten
-    + switch zwischen Multiselection und Single selection
-    - Punkte
+    - Timer?
     - beantwortete Fragen speichern -> keine doppelten Fragen
         - Prozentanzahl wieviel schon beantwortet in der Category
-    + Categoryname anzeige
-    - Timer?
-    - Start Logic/Screen
     - Save Load
+    + Random selection der Antworten möglichkeiten
+    + Antworten shuffeln
+    + Show answer result
+    + switch zwischen Multiselection und Single selection
+    + Punkte
+    + Categoryname anzeige
+    + nur einmal auf Antworten clicken
+    + Start Logic/Screen
      */
 
     public partial class Form1 : Form
@@ -54,6 +55,7 @@ namespace Quiz
                     ShowSingleSelection();
                     break;
             }
+            ShowScorePoints();
         }
 
         private void ShowSingleSelection()
@@ -105,53 +107,72 @@ namespace Quiz
             SingleSelection.Enabled = false;
         }
 
-        private bool CheckAnswer(int answer)
-        {
-            if (quizLogic.IsQuestionAvailable())
-            {
-                return quizLogic.IsAnswerCorrect(answer);
-
-
-                //quizLogic.AnswerQuestion(answer);
-            }
-            return false;
-        }
-
         private void AnswerBtn_Click(object sender, EventArgs e)
         {
+            if (quizLogic.IsQuestionAvailable() == false)
+                return;
+
             switch(quizLogic.GetCurrentQuestType())
             {
                 case QuestionType.MultiSelection:
-                    UpdateButton(0, MultiSelectionBox1.Checked, MultiSelectionBox1);
-                    UpdateButton(1, MultiSelectionBox2.Checked, MultiSelectionBox2);
-                    UpdateButton(2, MultiSelectionBox3.Checked, MultiSelectionBox3);
-                    UpdateButton(3, MultiSelectionBox4.Checked, MultiSelectionBox4);
+                    HandleAnswer(0, MultiSelectionBox1.Checked, MultiSelectionBox1);
+                    HandleAnswer(1, MultiSelectionBox2.Checked, MultiSelectionBox2);
+                    HandleAnswer(2, MultiSelectionBox3.Checked, MultiSelectionBox3);
+                    HandleAnswer(3, MultiSelectionBox4.Checked, MultiSelectionBox4);
                     break;
                 case QuestionType.SingleSelection:
-                    UpdateButton(0, SingleSelectionRadio1.Checked, SingleSelectionRadio1);
-                    UpdateButton(1, SingleSelectionRadio2.Checked, SingleSelectionRadio2);
-                    UpdateButton(2, SingleSelectionRadio3.Checked, SingleSelectionRadio3);
-                    UpdateButton(3, SingleSelectionRadio4.Checked, SingleSelectionRadio4);
+                    HandleAnswer(0, SingleSelectionRadio1.Checked, SingleSelectionRadio1);
+                    HandleAnswer(1, SingleSelectionRadio2.Checked, SingleSelectionRadio2);
+                    HandleAnswer(2, SingleSelectionRadio3.Checked, SingleSelectionRadio3);
+                    HandleAnswer(3, SingleSelectionRadio4.Checked, SingleSelectionRadio4);
                     break;
             }
+            ShowScorePoints();
 
 
-            void UpdateButton(int number, bool isChecked, ButtonBase box)
+            void HandleAnswer(int answer, bool isChecked, ButtonBase box)
             {
-                if (CheckAnswer(number))
+                if (quizLogic.IsAnswerCorrect(answer))
+                {
                     if (isChecked)
+                    {
                         box.BackColor = Color.Green;
+                        quizLogic.AnswerQuestion(answer);
+                    }
                     else
                         box.BackColor = Color.Red;
+                }
                 else if (isChecked)
+                {
                     box.BackColor = Color.Red;
+                    quizLogic.AnswerQuestion(answer);
+                }
             }
+        }
+
+        private void ShowScorePoints()
+        {
+            int diff = quizLogic.Score();
+            pointsDiffLbl.Text = $"{diff:+0;-0}";
+            if (diff > 0)
+                pointsDiffLbl.ForeColor = Color.Green;
+            else if (diff < 0)
+                pointsDiffLbl.ForeColor = Color.Red;
+            else
+                pointsDiffLbl.Text = "";
+
+            pointsLbl.Text = quizLogic.Points.ToString();
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
             quizLogic.NextQuestion();
             ShowQuest();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StartScreen.Hide();
         }
     }
 }

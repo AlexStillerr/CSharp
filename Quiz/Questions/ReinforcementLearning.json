@@ -1,0 +1,105 @@
+{
+  "quizTitle": "Reinforcement Learning – Fortgeschritten",
+  "questions": [
+    {
+      "question": "Was beschreibt die Bellman-Gleichung im Kontext des Reinforcement Learnings?",
+      "answers": [
+        {"text": "Sie stellt eine rekursive Beziehung zwischen dem Wert eines Zustands und dem erwarteten zukünftigen Belohnungswert her.", "isCorrect": true},
+        {"text": "Sie wird nur in modellbasierten RL-Methoden verwendet.", "isCorrect": false},
+        {"text": "Sie dient der Berechnung von Gradienten in neuronalen Netzen.", "isCorrect": false},
+        {"text": "Sie kann verwendet werden, um optimale Wertfunktionen zu approximieren.", "isCorrect": true},
+        {"text": "Sie beschreibt ausschließlich die Belohnungsfunktion.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussagen über den Unterschied zwischen Policy-Based und Value-Based Methoden sind korrekt?",
+      "answers": [
+        {"text": "Policy-Based Methoden lernen direkt eine Wahrscheinlichkeitsverteilung über Aktionen.", "isCorrect": true},
+        {"text": "Value-Based Methoden approximieren den erwarteten Return für jeden Zustand oder jede Aktion.", "isCorrect": true},
+        {"text": "Policy-Based Methoden benötigen zwingend ein Modell der Umgebung.", "isCorrect": false},
+        {"text": "Value-Based Methoden sind immer deterministisch.", "isCorrect": false},
+        {"text": "Actor-Critic kombiniert beide Ansätze.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Was ist das Ziel des Policy-Gradient-Verfahrens?",
+      "answers": [
+        {"text": "Maximierung des erwarteten kumulierten Rewards durch direktes Anpassen der Policy-Parameter.", "isCorrect": true},
+        {"text": "Minimierung des temporalen Unterschieds zwischen aufeinanderfolgenden Zuständen.", "isCorrect": false},
+        {"text": "Erlernen eines Wertschätzers für jede Aktion.", "isCorrect": false},
+        {"text": "Optimierung der Policy durch Gradientenaufstieg in Richtung besserer Aktionen.", "isCorrect": true},
+        {"text": "Training der Policy über supervised learning mit gelabelten Beispielen.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussagen über den Actor-Critic-Ansatz sind korrekt?",
+      "answers": [
+        {"text": "Der Actor aktualisiert die Policy, während der Critic den Wert der Aktionen schätzt.", "isCorrect": true},
+        {"text": "Der Critic verwendet typischerweise eine Wertfunktion wie V(s) oder Q(s,a).", "isCorrect": true},
+        {"text": "Actor-Critic ist eine reine Value-Based Methode.", "isCorrect": false},
+        {"text": "Der Critic reduziert die Varianz der Gradientenabschätzung.", "isCorrect": true},
+        {"text": "Der Actor verwendet keine Policy-Funktion.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Methoden gehören zu den gängigen Explorationstechniken im RL?",
+      "answers": [
+        {"text": "ε-greedy", "isCorrect": true},
+        {"text": "Softmax Action Selection", "isCorrect": true},
+        {"text": "Dropout Regularization", "isCorrect": false},
+        {"text": "Upper Confidence Bound (UCB)", "isCorrect": true},
+        {"text": "Policy Distillation", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Vorteile bietet der Einsatz von Experience Replay in Deep Q-Networks (DQN)?",
+      "answers": [
+        {"text": "Er reduziert die Korrelation zwischen aufeinanderfolgenden Trainingsdaten.", "isCorrect": true},
+        {"text": "Er ermöglicht effizientere Nutzung vergangener Erfahrungen.", "isCorrect": true},
+        {"text": "Er beschleunigt die Berechnung des Bellman-Updates.", "isCorrect": false},
+        {"text": "Er sorgt für stabileres Lernen durch zufälliges Sampling von Erfahrungen.", "isCorrect": true},
+        {"text": "Er eliminiert das Problem des Overfittings vollständig.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Verbesserungen wurden im Double DQN gegenüber dem klassischen DQN eingeführt?",
+      "answers": [
+        {"text": "Trennung der Aktionsauswahl und -bewertung, um Überschätzungsfehler zu reduzieren.", "isCorrect": true},
+        {"text": "Verwendung zweier separater neuronaler Netze für Policy und Reward.", "isCorrect": false},
+        {"text": "Reduzierung der Lernrate, um Stabilität zu erhöhen.", "isCorrect": false},
+        {"text": "Verwendung eines zweiten Q-Netzes zur stabileren Schätzung der Zielwerte.", "isCorrect": true},
+        {"text": "Einführung von Prioritized Experience Replay.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was beschreibt der Discount-Faktor (γ) im RL?",
+      "answers": [
+        {"text": "Er bestimmt, wie stark zukünftige Belohnungen gewichtet werden.", "isCorrect": true},
+        {"text": "Ein γ-Wert von 0 führt dazu, dass nur unmittelbare Belohnungen berücksichtigt werden.", "isCorrect": true},
+        {"text": "Ein γ-Wert von 1 führt zu einer vollständigen Missachtung zukünftiger Belohnungen.", "isCorrect": false},
+        {"text": "Hohe γ-Werte fördern langfristig orientiertes Verhalten.", "isCorrect": true},
+        {"text": "γ beeinflusst ausschließlich die Lernrate des Agenten.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussagen treffen auf den Begriff 'Advantage Function' zu?",
+      "answers": [
+        {"text": "Sie beschreibt, wie viel besser eine Aktion im Vergleich zum Durchschnitt ist.", "isCorrect": true},
+        {"text": "Sie wird häufig in Actor-Critic-Methoden zur Varianzreduktion eingesetzt.", "isCorrect": true},
+        {"text": "Sie wird definiert als A(s,a) = Q(s,a) - V(s).", "isCorrect": true},
+        {"text": "Sie ersetzt die Reward-Funktion im Training vollständig.", "isCorrect": false},
+        {"text": "Sie ist nur in modellbasierten RL-Methoden relevant.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Optimierungsstrategien werden häufig in Deep RL verwendet?",
+      "answers": [
+        {"text": "Adam Optimizer für neuronale Netzparameter.", "isCorrect": true},
+        {"text": "Trust Region Policy Optimization (TRPO).", "isCorrect": true},
+        {"text": "Stochastic Gradient Descent (SGD).", "isCorrect": true},
+        {"text": "Dynamic Time Warping (DTW).", "isCorrect": false},
+        {"text": "Genetic Algorithms zur Wertfunktionsschätzung.", "isCorrect": false}
+      ]
+    }
+  ]
+}

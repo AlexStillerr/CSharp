@@ -1,0 +1,105 @@
+{
+  "quizTitle": "C# – Tasks und async/await",
+  "questions": [
+    {
+      "question": "Was ist der Hauptzweck des Task-basierten asynchronen Musters (TAP) in C#?",
+      "answers": [
+        {"text": "Es vereinfacht die asynchrone Programmierung durch Verwendung von Tasks.", "isCorrect": true},
+        {"text": "Es ersetzt Threads vollständig.", "isCorrect": false},
+        {"text": "Es ermöglicht nicht-blockierende Ausführung von Code.", "isCorrect": true},
+        {"text": "Es benötigt explizite Thread-Verwaltung.", "isCorrect": false},
+        {"text": "Es wird nur für UI-Operationen verwendet.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Schlüsselwörter sind notwendig, um asynchrone Methoden in C# zu definieren?",
+      "answers": [
+        {"text": "async", "isCorrect": true},
+        {"text": "await", "isCorrect": true},
+        {"text": "yield", "isCorrect": false},
+        {"text": "defer", "isCorrect": false},
+        {"text": "task", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Methodenrückgabewerte sind für async-Methoden gültig?",
+      "answers": [
+        {"text": "Task", "isCorrect": true},
+        {"text": "Task<T>", "isCorrect": true},
+        {"text": "void", "isCorrect": true},
+        {"text": "int", "isCorrect": false},
+        {"text": "IEnumerable", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussage über das Schlüsselwort await ist korrekt?",
+      "answers": [
+        {"text": "Es pausiert die Ausführung der Methode, bis der Task abgeschlossen ist.", "isCorrect": true},
+        {"text": "Es blockiert den Thread, auf dem es aufgerufen wird.", "isCorrect": false},
+        {"text": "Es kann nur innerhalb von async-Methoden verwendet werden.", "isCorrect": true},
+        {"text": "Es wird beim Aufruf von synchronen Methoden verwendet.", "isCorrect": false},
+        {"text": "Es startet automatisch neue Threads.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Vorteile bietet async/await gegenüber klassischen Threads?",
+      "answers": [
+        {"text": "Weniger Thread-Overhead und Ressourcenverbrauch.", "isCorrect": true},
+        {"text": "Einfachere Fehlerbehandlung über Exceptions.", "isCorrect": true},
+        {"text": "Automatische Rückkehr in den ursprünglichen Synchronisierungskontext (z. B. UI-Thread).", "isCorrect": true},
+        {"text": "Automatische Parallelisierung von CPU-intensiven Aufgaben.", "isCorrect": false},
+        {"text": "Direkte Hardwarebeschleunigung.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Wie kann man verhindern, dass await zum UI-Thread zurückkehrt?",
+      "answers": [
+        {"text": "Mit ConfigureAwait(false).", "isCorrect": true},
+        {"text": "Mit Thread.Detach().", "isCorrect": false},
+        {"text": "Mit Task.RunDetached().", "isCorrect": false},
+        {"text": "Mit await.ConfigureTask(false).", "isCorrect": false},
+        {"text": "Mit Task.ConfigureAwait(false).", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welche Methode wird verwendet, um mehrere Tasks gleichzeitig auszuführen und auf alle zu warten?",
+      "answers": [
+        {"text": "Task.WhenAll()", "isCorrect": true},
+        {"text": "Task.WaitAll()", "isCorrect": true},
+        {"text": "Task.WhenAny()", "isCorrect": false},
+        {"text": "Task.Parallel()", "isCorrect": false},
+        {"text": "TaskGroup.Join()", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussage zu Fehlern in async-Methoden ist korrekt?",
+      "answers": [
+        {"text": "Ausnahmen in Tasks werden als AggregateException gekapselt.", "isCorrect": true},
+        {"text": "Mit await werden Exceptions direkt ausgelöst, nicht gekapselt.", "isCorrect": true},
+        {"text": "Async-Methoden können keine Exceptions werfen.", "isCorrect": false},
+        {"text": "Try/Catch funktioniert mit await wie bei synchronem Code.", "isCorrect": true},
+        {"text": "Fehler werden automatisch im UI-Thread angezeigt.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Methode startet eine asynchrone Operation ohne Rückgabewert?",
+      "answers": [
+        {"text": "Task.Run(() => { /* Code */ });", "isCorrect": true},
+        {"text": "Thread.Start(() => { /* Code */ });", "isCorrect": false},
+        {"text": "Task.Start(() => { /* Code */ });", "isCorrect": false},
+        {"text": "async void MyMethod() { /* Code */ }", "isCorrect": true},
+        {"text": "Task.RunAsync(() => { /* Code */ });", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Best Practices gelten für den Einsatz von async/await?",
+      "answers": [
+        {"text": "Vermeide async void außer bei Event-Handlern.", "isCorrect": true},
+        {"text": "Nutze ConfigureAwait(false) in Bibliotheken.", "isCorrect": true},
+        {"text": "Starte Tasks direkt im UI-Thread.", "isCorrect": false},
+        {"text": "Kombiniere Task.WhenAll() für parallele async-Operationen.", "isCorrect": true},
+        {"text": "Blockiere nie mit Task.Wait() oder .Result() im UI-Thread.", "isCorrect": true}
+      ]
+    }
+  ]
+}

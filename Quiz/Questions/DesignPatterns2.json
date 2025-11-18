@@ -1,0 +1,205 @@
+{
+  "quizTitle": "C# – Behavioral Design Patterns (Verhaltensmuster)",
+  "questions": [
+    {
+      "question": "Was ist das Hauptziel von Behavioral Patterns?",
+      "answers": [
+        {"text": "Sie definieren, wie Objekte miteinander kommunizieren und zusammenarbeiten.", "isCorrect": true},
+        {"text": "Sie steuern die Objekt-Erstellung.", "isCorrect": false},
+        {"text": "Sie konzentrieren sich auf die Struktur von Klassen.", "isCorrect": false},
+        {"text": "Sie verbessern die Laufzeit-Performance von Algorithmen.", "isCorrect": false},
+        {"text": "Sie reduzieren Kopplung zwischen Komponenten.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht es einem Objekt, Änderungen an viele andere Objekte weiterzugeben?",
+      "answers": [
+        {"text": "Observer", "isCorrect": true},
+        {"text": "Mediator", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false},
+        {"text": "State", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern kapselt eine Familie von Algorithmen und macht sie austauschbar?",
+      "answers": [
+        {"text": "Strategy", "isCorrect": true},
+        {"text": "State", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false},
+        {"text": "Template Method", "isCorrect": false},
+        {"text": "Command", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was ist der Hauptunterschied zwischen Strategy und State?",
+      "answers": [
+        {"text": "Strategy wählt ein Verhalten, State ändert es dynamisch basierend auf internen Zuständen.", "isCorrect": true},
+        {"text": "Strategy wird nur zur Kompilierzeit verwendet.", "isCorrect": false},
+        {"text": "State erfordert immer Vererbung.", "isCorrect": false},
+        {"text": "Beide sind identisch in ihrer Struktur.", "isCorrect": false},
+        {"text": "State-Pattern hat keine Kontextklasse.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern erlaubt das Speichern und Wiederherstellen des Zustands eines Objekts?",
+      "answers": [
+        {"text": "Memento", "isCorrect": true},
+        {"text": "State", "isCorrect": false},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false},
+        {"text": "Command", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern kapselt eine Anfrage (Request) als Objekt?",
+      "answers": [
+        {"text": "Command", "isCorrect": true},
+        {"text": "Chain of Responsibility", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Observer", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht Undo-/Redo-Funktionalität?",
+      "answers": [
+        {"text": "Command", "isCorrect": true},
+        {"text": "Memento", "isCorrect": true},
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Template Method", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was beschreibt das Mediator Pattern?",
+      "answers": [
+        {"text": "Ein Vermittlerobjekt steuert die Kommunikation zwischen Objekten.", "isCorrect": true},
+        {"text": "Es reduziert Abhängigkeiten zwischen Klassen.", "isCorrect": true},
+        {"text": "Es ersetzt die Observer-Kommunikation vollständig.", "isCorrect": false},
+        {"text": "Es steuert nur die Objekt-Erzeugung.", "isCorrect": false},
+        {"text": "Es ist ein strukturelles Pattern.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was ist das Ziel des Chain of Responsibility Patterns?",
+      "answers": [
+        {"text": "Anfragen werden entlang einer Kette von Handlern weitergereicht, bis einer sie verarbeitet.", "isCorrect": true},
+        {"text": "Es implementiert direkte 1:1-Kommunikation zwischen Objekten.", "isCorrect": false},
+        {"text": "Es wird verwendet, um Befehle in einer Warteschlange zu speichern.", "isCorrect": false},
+        {"text": "Es erzeugt Handler-Objekte dynamisch.", "isCorrect": false},
+        {"text": "Es basiert auf Observern.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern definiert das Grundgerüst eines Algorithmus und erlaubt Unterklassen, Schritte zu überschreiben?",
+      "answers": [
+        {"text": "Template Method", "isCorrect": true},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Observer", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was ist der Hauptzweck des Visitor Patterns?",
+      "answers": [
+        {"text": "Es erlaubt das Hinzufügen neuer Operationen zu bestehenden Klassen ohne sie zu ändern.", "isCorrect": true},
+        {"text": "Es trennt Operationen von den Datenstrukturen, auf denen sie arbeiten.", "isCorrect": true},
+        {"text": "Es ersetzt die Vererbung.", "isCorrect": false},
+        {"text": "Es wird nur für GUI-Komponenten verwendet.", "isCorrect": false},
+        {"text": "Es kapselt Anfragen in Objekte.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht es, dass mehrere Objekte nacheinander dieselbe Anfrage bearbeiten können?",
+      "answers": [
+        {"text": "Chain of Responsibility", "isCorrect": true},
+        {"text": "Mediator", "isCorrect": false},
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Strategy", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussage über das Interpreter Pattern ist korrekt?",
+      "answers": [
+        {"text": "Es definiert eine Grammatik und interpretiert Sätze dieser Grammatik.", "isCorrect": true},
+        {"text": "Es dient zur Analyse von Textausdrücken.", "isCorrect": true},
+        {"text": "Es wird häufig für SQL- oder Regel-Engines genutzt.", "isCorrect": true},
+        {"text": "Es steuert die Objekt-Erzeugung.", "isCorrect": false},
+        {"text": "Es ist ein strukturelles Pattern.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern wird oft mit Publisher/Subscriber-Systemen assoziiert?",
+      "answers": [
+        {"text": "Observer", "isCorrect": true},
+        {"text": "Mediator", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Memento", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern ermöglicht eine Zustandsänderung eines Objekts, ohne dessen Klasse zu ändern?",
+      "answers": [
+        {"text": "State", "isCorrect": true},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was ist ein gemeinsamer Einsatzbereich für das Iterator Pattern?",
+      "answers": [
+        {"text": "Bereitstellung einer einheitlichen Möglichkeit, über Sammlungen zu iterieren.", "isCorrect": true},
+        {"text": "Ermöglicht Traversierung ohne Kenntnis der internen Struktur.", "isCorrect": true},
+        {"text": "Optimiert Datenbankabfragen.", "isCorrect": false},
+        {"text": "Wird nur für Arrays verwendet.", "isCorrect": false},
+        {"text": "Verhindert Thread-Synchronisationsprobleme.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern kann als Kombination aus Command und Mediator betrachtet werden?",
+      "answers": [
+        {"text": "Observer", "isCorrect": false},
+        {"text": "Chain of Responsibility", "isCorrect": false},
+        {"text": "Event Aggregator", "isCorrect": true},
+        {"text": "State", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was beschreibt das Null Object Pattern?",
+      "answers": [
+        {"text": "Ein Objekt, das keine Aktion ausführt, aber eine gültige Implementierung bereitstellt.", "isCorrect": true},
+        {"text": "Es ersetzt Null-Referenzen durch leere Objekte.", "isCorrect": true},
+        {"text": "Es verhindert NullReferenceExceptions.", "isCorrect": true},
+        {"text": "Es erzeugt neue Instanzen bei Bedarf.", "isCorrect": false},
+        {"text": "Es implementiert Observer.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Pattern kann verwendet werden, um Verhalten dynamisch zu kombinieren, ähnlich wie beim Decorator, aber auf Methodenebene?",
+      "answers": [
+        {"text": "Chain of Responsibility", "isCorrect": true},
+        {"text": "Strategy", "isCorrect": false},
+        {"text": "Visitor", "isCorrect": false},
+        {"text": "State", "isCorrect": false},
+        {"text": "Observer", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welches Behavioral Pattern ermöglicht ein automatisches Benachrichtigen, wenn sich ein bestimmter Zustand ändert?",
+      "answers": [
+        {"text": "Observer", "isCorrect": true},
+        {"text": "State", "isCorrect": false},
+        {"text": "Mediator", "isCorrect": false},
+        {"text": "Command", "isCorrect": false},
+        {"text": "Template Method", "isCorrect": false}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "quizTitle": "C# – Windows Forms (WinForms)",
+  "questions": [
+    {
+      "question": "Welche Klasse stellt das Hauptfenster einer WinForms-Anwendung dar?",
+      "answers": [
+        {"text": "Form", "isCorrect": true},
+        {"text": "Window", "isCorrect": false},
+        {"text": "MainWindow", "isCorrect": false},
+        {"text": "UserControl", "isCorrect": false},
+        {"text": "ApplicationContext", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Methode startet typischerweise die Ausführung einer WinForms-Anwendung?",
+      "answers": [
+        {"text": "Application.Run()", "isCorrect": true},
+        {"text": "Form.Show()", "isCorrect": false},
+        {"text": "Application.Start()", "isCorrect": false},
+        {"text": "Program.Main()", "isCorrect": true},
+        {"text": "Window.Run()", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Eigenschaften einer Form beeinflussen ihr Erscheinungsbild zur Laufzeit?",
+      "answers": [
+        {"text": "Text", "isCorrect": true},
+        {"text": "BackColor", "isCorrect": true},
+        {"text": "Dock", "isCorrect": false},
+        {"text": "StartPosition", "isCorrect": true},
+        {"text": "FontStyle", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussage zu Ereignissen (Events) in WinForms ist korrekt?",
+      "answers": [
+        {"text": "Ereignisse werden durch Delegates repräsentiert.", "isCorrect": true},
+        {"text": "Ein Event-Handler muss die Signatur eines EventDelegate-Typs haben.", "isCorrect": true},
+        {"text": "Ein Event kann nur einmal abonniert werden.", "isCorrect": false},
+        {"text": "Mehrere Methoden können auf dasselbe Event reagieren.", "isCorrect": true},
+        {"text": "Events werden ausschließlich durch Timer ausgelöst.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Methoden sind typisch für das Zeichnen von benutzerdefinierten Oberflächen in WinForms?",
+      "answers": [
+        {"text": "OnPaint()", "isCorrect": true},
+        {"text": "CreateGraphics()", "isCorrect": true},
+        {"text": "PaintEventArgs.Graphics", "isCorrect": true},
+        {"text": "RenderUI()", "isCorrect": false},
+        {"text": "OnRender()", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Steuerelemente werden typischerweise für Benutzereingaben verwendet?",
+      "answers": [
+        {"text": "TextBox", "isCorrect": true},
+        {"text": "Button", "isCorrect": false},
+        {"text": "ComboBox", "isCorrect": true},
+        {"text": "CheckBox", "isCorrect": true},
+        {"text": "Label", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Wie kann man einen Hintergrundprozess ausführen, ohne die UI zu blockieren?",
+      "answers": [
+        {"text": "Verwendung eines BackgroundWorker.", "isCorrect": true},
+        {"text": "Verwendung von async/await mit Task.Run().", "isCorrect": true},
+        {"text": "Start eines Threads mit Thread.Start().", "isCorrect": true},
+        {"text": "Verwendung von Thread.Sleep() im UI-Thread.", "isCorrect": false},
+        {"text": "Blockieren der Application.Run()-Schleife.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Eigenschaft eines Steuerelements bestimmt seine relative Position innerhalb eines Containers?",
+      "answers": [
+        {"text": "Dock", "isCorrect": true},
+        {"text": "Anchor", "isCorrect": true},
+        {"text": "Margin", "isCorrect": true},
+        {"text": "TabIndex", "isCorrect": false},
+        {"text": "ZIndex", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussage über MDI (Multiple Document Interface) in WinForms ist korrekt?",
+      "answers": [
+        {"text": "MDI ermöglicht es, mehrere untergeordnete Fenster in einem Hauptfenster zu öffnen.", "isCorrect": true},
+        {"text": "Eine MDI-Elternform wird durch Setzen von IsMdiContainer = true erstellt.", "isCorrect": true},
+        {"text": "Child-Forms müssen dieselbe Klasse wie das Hauptformular sein.", "isCorrect": false},
+        {"text": "MDI wird über TabControl implementiert.", "isCorrect": false},
+        {"text": "Ein MDI-Formular kann keine Menüs enthalten.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Wie können Daten zwischen verschiedenen Formularen in einer WinForms-Anwendung ausgetauscht werden?",
+      "answers": [
+        {"text": "Durch Übergabe von Referenzen beim Erstellen des neuen Formulars.", "isCorrect": true},
+        {"text": "Über öffentliche Eigenschaften oder Methoden der Form-Klasse.", "isCorrect": true},
+        {"text": "Durch Verwendung von globalen statischen Variablen.", "isCorrect": true},
+        {"text": "Durch direkten Zugriff auf Controls eines geschlossenen Formulars.", "isCorrect": false},
+        {"text": "Über Windows Registry-Events.", "isCorrect": false}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "quizTitle": "C# – Threads und Nebenläufigkeit",
+  "questions": [
+    {
+      "question": "Welche Klasse wird in C# für die Arbeit mit Threads direkt verwendet?",
+      "answers": [
+        {"text": "System.Threading.Thread", "isCorrect": true},
+        {"text": "System.Threading.Tasks.Task", "isCorrect": false},
+        {"text": "System.Threading.Timer", "isCorrect": false},
+        {"text": "ThreadPool", "isCorrect": false},
+        {"text": "System.Threading.Process", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Wie wird ein neuer Thread in C# gestartet?",
+      "answers": [
+        {"text": "Thread t = new Thread(MethodName); t.Start();", "isCorrect": true},
+        {"text": "Thread.Start(MethodName);", "isCorrect": false},
+        {"text": "Task.Run(MethodName);", "isCorrect": false},
+        {"text": "new Thread(MethodName).Run();", "isCorrect": false},
+        {"text": "new Thread(MethodName).Start();", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welche Methoden gehören zur Thread-Klasse?",
+      "answers": [
+        {"text": "Start()", "isCorrect": true},
+        {"text": "Join()", "isCorrect": true},
+        {"text": "Abort()", "isCorrect": true},
+        {"text": "Execute()", "isCorrect": false},
+        {"text": "WaitAll()", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussage über Thread-Synchronisation ist korrekt?",
+      "answers": [
+        {"text": "lock-Statements verhindern gleichzeitigen Zugriff mehrerer Threads auf kritische Abschnitte.", "isCorrect": true},
+        {"text": "Monitor.Enter() und Monitor.Exit() sind funktional äquivalent zu lock.", "isCorrect": true},
+        {"text": "Mutex kann auch zwischen Prozessen verwendet werden.", "isCorrect": true},
+        {"text": "lock blockiert niemals Threads.", "isCorrect": false},
+        {"text": "SemaphoreSlim kann verwendet werden, um mehrere gleichzeitige Zugriffe zuzulassen.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welche Aussage über den ThreadPool ist korrekt?",
+      "answers": [
+        {"text": "Er verwaltet eine begrenzte Anzahl wiederverwendbarer Threads.", "isCorrect": true},
+        {"text": "Threads aus dem ThreadPool können direkt gestoppt werden.", "isCorrect": false},
+        {"text": "ThreadPool-Threads beenden sich automatisch nach der Arbeit.", "isCorrect": true},
+        {"text": "ThreadPool ist ausschließlich für UI-Operationen gedacht.", "isCorrect": false},
+        {"text": "QueueUserWorkItem() kann verwendet werden, um eine Aufgabe in den Pool zu legen.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welche Risiken bestehen bei unkoordinierter Thread-Nutzung?",
+      "answers": [
+        {"text": "Race Conditions", "isCorrect": true},
+        {"text": "Deadlocks", "isCorrect": true},
+        {"text": "Thread Starvation", "isCorrect": true},
+        {"text": "Static Overflow", "isCorrect": false},
+        {"text": "Stack Leakage", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Was bewirkt die Methode Thread.Join()?",
+      "answers": [
+        {"text": "Der aktuelle Thread wartet, bis der aufgerufene Thread beendet ist.", "isCorrect": true},
+        {"text": "Beide Threads werden synchronisiert und laufen parallel weiter.", "isCorrect": false},
+        {"text": "Der aufgerufene Thread wird sofort beendet.", "isCorrect": false},
+        {"text": "Der aktuelle Thread wird in den ThreadPool verschoben.", "isCorrect": false},
+        {"text": "Join() blockiert, bis der Thread abgeschlossen ist.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welche Unterschiede bestehen zwischen Thread und Task in C#?",
+      "answers": [
+        {"text": "Tasks sind höherstufige Abstraktionen für asynchrone Operationen.", "isCorrect": true},
+        {"text": "Threads müssen manuell gestartet und verwaltet werden.", "isCorrect": true},
+        {"text": "Tasks können einfacher kombiniert und fortgesetzt werden.", "isCorrect": true},
+        {"text": "Threads sind Teil von async/await.", "isCorrect": false},
+        {"text": "Tasks ersetzen vollständig alle Threads im .NET Framework.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Synchronisationsmechanismen gibt es in .NET?",
+      "answers": [
+        {"text": "lock / Monitor", "isCorrect": true},
+        {"text": "Mutex", "isCorrect": true},
+        {"text": "Semaphore / SemaphoreSlim", "isCorrect": true},
+        {"text": "Barrier", "isCorrect": true},
+        {"text": "Thread.StopSignal", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Best Practices gelten für Multithreading in C#?",
+      "answers": [
+        {"text": "Vermeide gemeinsam genutzte mutable Zustände.", "isCorrect": true},
+        {"text": "Nutze Thread.Sleep() zum Synchronisieren.", "isCorrect": false},
+        {"text": "Bevorzuge Tasks und async/await für asynchrone Logik.", "isCorrect": true},
+        {"text": "Führe UI-Updates immer aus einem Worker-Thread aus.", "isCorrect": false},
+        {"text": "Verwende Concurrent-Klassen wie ConcurrentQueue oder ConcurrentDictionary.", "isCorrect": true}
+      ]
+    }
+  ]
+}

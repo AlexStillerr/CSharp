@@ -1,0 +1,105 @@
+{
+  "quizTitle": "C# - Generics (Templates)",
+  "questions": [
+    {
+      "question": "Was ist der Hauptzweck von Generics in C#?",
+      "answers": [
+        {"text": "Ermöglichen von typsicheren, wiederverwendbaren Klassen und Methoden.", "isCorrect": true},
+        {"text": "Reduzierung der Notwendigkeit für Typumwandlungen (Casts).", "isCorrect": true},
+        {"text": "Erhöhung der Performance durch Typbindung zur Laufzeit.", "isCorrect": false},
+        {"text": "Verwendung von Reflection zur Typprüfung.", "isCorrect": false},
+        {"text": "Vermeidung von Boxing und Unboxing bei Werttypen.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Wie deklariert man eine generische Klasse in C#?",
+      "answers": [
+        {"text": "class MyClass<T> { }", "isCorrect": true},
+        {"text": "template<class T> class MyClass { }", "isCorrect": false},
+        {"text": "generic<T> class MyClass { }", "isCorrect": false},
+        {"text": "class MyClass(type T) { }", "isCorrect": false},
+        {"text": "class MyClass: T { }", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Wie definiert man eine Methode, die Generics verwendet?",
+      "answers": [
+        {"text": "void Print<T>(T value) { Console.WriteLine(value); }", "isCorrect": true},
+        {"text": "template void Print<T>(T value)", "isCorrect": false},
+        {"text": "static T Create<T>() where T : new()", "isCorrect": true},
+        {"text": "T GetValue<T>(int id)", "isCorrect": true},
+        {"text": "void Print(type T)", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Vorteile bieten Generics gegenüber dem Einsatz von object?",
+      "answers": [
+        {"text": "Typprüfung zur Kompilierzeit.", "isCorrect": true},
+        {"text": "Bessere Performance durch Vermeidung von Boxing/Unboxing.", "isCorrect": true},
+        {"text": "Einfachere Nutzung durch dynamische Typanpassung.", "isCorrect": false},
+        {"text": "Sicherere API-Definitionen.", "isCorrect": true},
+        {"text": "Automatische Thread-Synchronisierung.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche generischen Einschränkungen (Constraints) sind in C# erlaubt?",
+      "answers": [
+        {"text": "where T : class", "isCorrect": true},
+        {"text": "where T : struct", "isCorrect": true},
+        {"text": "where T : new()", "isCorrect": true},
+        {"text": "where T : static", "isCorrect": false},
+        {"text": "where T : IDisposable", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welche Aussage über Generics und Vererbung ist korrekt?",
+      "answers": [
+        {"text": "Generische Klassen können von anderen generischen Klassen erben.", "isCorrect": true},
+        {"text": "Eine generische Klasse kann eine nicht-generische Basisklasse haben.", "isCorrect": true},
+        {"text": "Generische Typen können in Interfaces verwendet werden.", "isCorrect": true},
+        {"text": "Generische Typen können keine Interfaces implementieren.", "isCorrect": false},
+        {"text": "Generische Basisklassen müssen denselben Typparameter haben.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Klassen in .NET nutzen Generics intensiv?",
+      "answers": [
+        {"text": "List<T>", "isCorrect": true},
+        {"text": "Dictionary<TKey, TValue>", "isCorrect": true},
+        {"text": "ArrayList", "isCorrect": false},
+        {"text": "Queue<T>", "isCorrect": true},
+        {"text": "Hashtable", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Aussage über Covariance und Contravariance in C# ist korrekt?",
+      "answers": [
+        {"text": "Covariance erlaubt die Verwendung eines abgeleiteten Typs anstelle eines Basistyps (out).", "isCorrect": true},
+        {"text": "Contravariance erlaubt die Verwendung eines Basistyps anstelle eines abgeleiteten Typs (in).", "isCorrect": true},
+        {"text": "Variance gilt nur für Interfaces und Delegates.", "isCorrect": true},
+        {"text": "Variance kann auf Klassen angewendet werden.", "isCorrect": false},
+        {"text": "Variance funktioniert nur mit Werttypen.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Welche Einschränkungen gelten für Typparameter mit new()-Constraint?",
+      "answers": [
+        {"text": "Der Typ muss einen parameterlosen öffentlichen Konstruktor besitzen.", "isCorrect": true},
+        {"text": "Der Typ darf kein abstrakter Typ sein.", "isCorrect": true},
+        {"text": "Der Typ kann eine Schnittstelle (Interface) sein.", "isCorrect": false},
+        {"text": "Der Typ darf ein struct sein.", "isCorrect": false},
+        {"text": "Der Typ kann generisch oder nicht-generisch sein.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Welche Vorteile bieten generische Methoden in Interfaces?",
+      "answers": [
+        {"text": "Sie ermöglichen flexible Implementierungen mit unterschiedlichen Typen.", "isCorrect": true},
+        {"text": "Sie erlauben typsichere Operationen ohne Code-Duplizierung.", "isCorrect": true},
+        {"text": "Sie erzwingen die Verwendung von Reflection.", "isCorrect": false},
+        {"text": "Sie sind nur in abstrakten Klassen erlaubt.", "isCorrect": false},
+        {"text": "Sie können unterschiedliche Rückgabetypen pro Implementierung haben.", "isCorrect": true}
+      ]
+    }
+  ]
+}
