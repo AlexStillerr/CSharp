@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="77*"/>
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.Row="1" Click="CallPython"/>
+            <Button x:Name="Lern" Grid.Column="0" Grid.Row="1" Click="CallPython" Content="Learn"/>
             <Grid Name="TopLine" Grid.Row="0" Grid.Column="1" ShowGridLines="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#FFB11717">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -60,6 +60,8 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
             </Grid>
+            <Button x:Name="LoadBtn" Grid.Column="2" Content="Load" Margin="0,70,0,0" Grid.Row="1" VerticalAlignment="Top" Click="LoadAI"/>
+            <Button x:Name="SaveBtn" Grid.Column="2" Content="Save" Margin="0,100,0,0" Grid.Row="1" VerticalAlignment="Top" Click="SaveAI"/>
         </Grid>
 
     </Grid>

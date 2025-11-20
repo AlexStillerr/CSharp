@@ -2,19 +2,10 @@
 using MatchFour.Game;
 using MatchFour.UserControlls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Numerics;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MatchFour
 {
@@ -25,7 +16,7 @@ namespace MatchFour
     {
 
         private PlayStone[,] visualField = new PlayStone[7,6];
-
+        PythonClient client = new PythonClient();
         private MatchFourGame game = new();
 
         public MainWindow()
@@ -55,31 +46,88 @@ namespace MatchFour
                 }
             }
         }
+        
+        private async void ClickOnCol(int col)
+        {
+            int player = game.ActivePlayer();
+            bool isOver = DoTurn(col);
+            bool keepOnPlaying = CheckGameOver();
 
-        private void ClickOnCol(int col)
+            if (keepOnPlaying)
+            {
+                player = game.ActivePlayer();
+                isOver = await DoAiTurn(true);
+                CheckGameOver();
+            }
+
+
+            bool CheckGameOver()
+            {
+                if (isOver)
+                {
+                    MessageBoxResult result = MessageBox.Show($"Spiel ist vorbei uns Spieler {player} hat gewonnen.\nNoch eine Runde?", "Gameover", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                        Reset();
+                    else
+                        return false;
+                }
+                return true;
+            }
+        }
+
+        private bool DoTurn(int col)
         {
             (int row, int player) = game.TryToAddStone(col);
             if (player != -1)
             {
                 visualField[col, 5 - row].PlayerId = player;
-                if (game.CheckGameOver(player))
-                {
-                    MessageBoxResult result = MessageBox.Show($"Spiel ist vorbei uns Spieler {player} hat gewonnen.\nNoch eine Runde?", "Gameover", MessageBoxButton.YesNo);
-
-                    if (result == MessageBoxResult.Yes)
-                    {
-                        Reset();
-                    }
-                }
+                return game.CheckGameOver(player);
             }
+            return false;
         }
 
+        private bool isLearning = false, stop = false;
         private async void CallPython(object sender, RoutedEventArgs e)
         {
-            var client = new PythonClient();
-            string answer = await client.SendTextAsync("Hallo von C#");
+            if (isLearning)
+                stop = true;
+            else
+                await RunAI();
 
-            MessageBox.Show(answer);
+            MessageBoxResult result = MessageBox.Show($"Berechnung vorbei", "Gameover", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+                Reset();
+        }
+
+        private async Task RunAI()
+        {
+            isLearning = true;
+            for (int i = 0; i < 1000; ++i)
+            {
+                int player = game.ActivePlayer();
+                bool isOver = false;
+                while (!isOver)
+                {
+                    isOver = await DoAiTurn(false);
+                }
+
+                await client.SendGameover();
+                Reset();
+                if (stop)
+                    break;
+            }
+            stop = false;
+            isLearning = false;
+        }
+
+        private async Task<bool> DoAiTurn(bool isProductionTurn)
+        {
+            int player = game.ActivePlayer();
+            int x = await client.SendStateAndActions(game.GetField(), game.GetPossibleActions(), player, isProductionTurn);
+            bool isOver = DoTurn(x % 7);
+            await client.SendReward(game.GetField(), game.GetReward(player), player);
+            return isOver;
         }
 
         private void Reset()
@@ -92,6 +140,23 @@ namespace MatchFour
                     visualField[x, y].PlayerId = 0;
                 }
             }
+        }
+
+        string path = "";
+        //string pathPlayer1 = "matchFourPlayer1.json";
+        //string pathPlayer2 = "matchFourPlayer2.json";
+        string pathPlayer1 = "MatchFourAi1.json";
+        string pathPlayer2 = "MatchFourAi2.json";
+        private async void SaveAI(object sender, RoutedEventArgs e)
+        {
+            await client.SendSaveAi(path+pathPlayer1, path + pathPlayer2);
+            MessageBoxResult result = MessageBox.Show($"Es wurde gespeichert", "Save AI", MessageBoxButton.OK);
+        }
+
+        private async void LoadAI(object sender, RoutedEventArgs e)
+        {
+            await client.SendLoadAi(path + pathPlayer1, path + pathPlayer2);
+            MessageBoxResult result = MessageBox.Show($"Es wurde geladen", "Load AI", MessageBoxButton.OK);
         }
     }
 }
