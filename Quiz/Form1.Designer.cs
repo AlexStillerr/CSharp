@@ -32,8 +32,14 @@
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.AnswerBtn = new System.Windows.Forms.Button();
             this.MultiSelection = new System.Windows.Forms.Panel();
+            this.MultiSelectionBox4 = new System.Windows.Forms.CheckBox();
+            this.MultiSelectionBox3 = new System.Windows.Forms.CheckBox();
+            this.MultiSelectionBox2 = new System.Windows.Forms.CheckBox();
             this.MultiSelectionBox1 = new System.Windows.Forms.CheckBox();
             this.SingleSelection = new System.Windows.Forms.Panel();
+            this.SingleSelectionRadio4 = new System.Windows.Forms.RadioButton();
+            this.SingleSelectionRadio3 = new System.Windows.Forms.RadioButton();
+            this.SingleSelectionRadio2 = new System.Windows.Forms.RadioButton();
             this.SingleSelectionRadio1 = new System.Windows.Forms.RadioButton();
             this.QuestionLabel = new System.Windows.Forms.Label();
             this.NextBtn = new System.Windows.Forms.Button();
@@ -41,15 +47,9 @@
             this.pointsLbl = new System.Windows.Forms.Label();
             this.pointsDiffLbl = new System.Windows.Forms.Label();
             this.StartScreen = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.SingleSelectionRadio2 = new System.Windows.Forms.RadioButton();
-            this.SingleSelectionRadio3 = new System.Windows.Forms.RadioButton();
-            this.SingleSelectionRadio4 = new System.Windows.Forms.RadioButton();
-            this.MultiSelectionBox2 = new System.Windows.Forms.CheckBox();
-            this.MultiSelectionBox3 = new System.Windows.Forms.CheckBox();
-            this.MultiSelectionBox4 = new System.Windows.Forms.CheckBox();
             this.MultiSelection.SuspendLayout();
             this.SingleSelection.SuspendLayout();
             this.StartScreen.SuspendLayout();
@@ -59,13 +59,15 @@
             // CategoryLabel
             // 
             this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryLabel.Location = new System.Drawing.Point(45, 9);
-            this.CategoryLabel.MinimumSize = new System.Drawing.Size(500, 50);
+            this.CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.Location = new System.Drawing.Point(5, 9);
+            this.CategoryLabel.MaximumSize = new System.Drawing.Size(595, 0);
+            this.CategoryLabel.MinimumSize = new System.Drawing.Size(570, 50);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(500, 50);
+            this.CategoryLabel.Size = new System.Drawing.Size(570, 52);
             this.CategoryLabel.TabIndex = 0;
-            this.CategoryLabel.Text = "Kategorie";
+            this.CategoryLabel.Text = "Kategorie Kategorie Kategorie Kategorie Kategorie Kategorie Kategorie v Kategorie" +
+    "  v v  Kategoriev";
             this.CategoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AnswerBtn
@@ -94,6 +96,42 @@
             this.MultiSelection.TabIndex = 1;
             this.MultiSelection.Visible = false;
             // 
+            // MultiSelectionBox4
+            // 
+            this.MultiSelectionBox4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MultiSelectionBox4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MultiSelectionBox4.Location = new System.Drawing.Point(21, 233);
+            this.MultiSelectionBox4.Name = "MultiSelectionBox4";
+            this.MultiSelectionBox4.Size = new System.Drawing.Size(523, 70);
+            this.MultiSelectionBox4.TabIndex = 4;
+            this.MultiSelectionBox4.TabStop = false;
+            this.MultiSelectionBox4.Text = "Das ist Antwortmöglichkeit 4";
+            this.MultiSelectionBox4.UseVisualStyleBackColor = false;
+            // 
+            // MultiSelectionBox3
+            // 
+            this.MultiSelectionBox3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MultiSelectionBox3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MultiSelectionBox3.Location = new System.Drawing.Point(21, 157);
+            this.MultiSelectionBox3.Name = "MultiSelectionBox3";
+            this.MultiSelectionBox3.Size = new System.Drawing.Size(523, 70);
+            this.MultiSelectionBox3.TabIndex = 3;
+            this.MultiSelectionBox3.TabStop = false;
+            this.MultiSelectionBox3.Text = "Das ist Antwortmöglichkeit 3";
+            this.MultiSelectionBox3.UseVisualStyleBackColor = false;
+            // 
+            // MultiSelectionBox2
+            // 
+            this.MultiSelectionBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MultiSelectionBox2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MultiSelectionBox2.Location = new System.Drawing.Point(21, 81);
+            this.MultiSelectionBox2.Name = "MultiSelectionBox2";
+            this.MultiSelectionBox2.Size = new System.Drawing.Size(523, 70);
+            this.MultiSelectionBox2.TabIndex = 2;
+            this.MultiSelectionBox2.TabStop = false;
+            this.MultiSelectionBox2.Text = "Das ist Antwortmöglichkeit 2";
+            this.MultiSelectionBox2.UseVisualStyleBackColor = false;
+            // 
             // MultiSelectionBox1
             // 
             this.MultiSelectionBox1.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -120,6 +158,36 @@
             this.SingleSelection.Size = new System.Drawing.Size(560, 319);
             this.SingleSelection.TabIndex = 5;
             this.SingleSelection.Visible = false;
+            // 
+            // SingleSelectionRadio4
+            // 
+            this.SingleSelectionRadio4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SingleSelectionRadio4.Location = new System.Drawing.Point(21, 233);
+            this.SingleSelectionRadio4.Name = "SingleSelectionRadio4";
+            this.SingleSelectionRadio4.Size = new System.Drawing.Size(523, 70);
+            this.SingleSelectionRadio4.TabIndex = 8;
+            this.SingleSelectionRadio4.Text = "Antwort 4";
+            this.SingleSelectionRadio4.UseVisualStyleBackColor = true;
+            // 
+            // SingleSelectionRadio3
+            // 
+            this.SingleSelectionRadio3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SingleSelectionRadio3.Location = new System.Drawing.Point(21, 157);
+            this.SingleSelectionRadio3.Name = "SingleSelectionRadio3";
+            this.SingleSelectionRadio3.Size = new System.Drawing.Size(523, 70);
+            this.SingleSelectionRadio3.TabIndex = 7;
+            this.SingleSelectionRadio3.Text = "Antwort 3";
+            this.SingleSelectionRadio3.UseVisualStyleBackColor = true;
+            // 
+            // SingleSelectionRadio2
+            // 
+            this.SingleSelectionRadio2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SingleSelectionRadio2.Location = new System.Drawing.Point(21, 81);
+            this.SingleSelectionRadio2.Name = "SingleSelectionRadio2";
+            this.SingleSelectionRadio2.Size = new System.Drawing.Size(523, 70);
+            this.SingleSelectionRadio2.TabIndex = 6;
+            this.SingleSelectionRadio2.Text = "Antwort 2";
+            this.SingleSelectionRadio2.UseVisualStyleBackColor = true;
             // 
             // SingleSelectionRadio1
             // 
@@ -193,10 +261,21 @@
             this.StartScreen.Controls.Add(this.button1);
             this.StartScreen.Controls.Add(this.label2);
             this.StartScreen.Controls.Add(this.pictureBox1);
-            this.StartScreen.Location = new System.Drawing.Point(12, 9);
+            this.StartScreen.Location = new System.Drawing.Point(12, 12);
             this.StartScreen.Name = "StartScreen";
             this.StartScreen.Size = new System.Drawing.Size(560, 554);
             this.StartScreen.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(211, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 64);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Starten";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -216,83 +295,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(436, 393);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(211, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 64);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Starten";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // SingleSelectionRadio2
-            // 
-            this.SingleSelectionRadio2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SingleSelectionRadio2.Location = new System.Drawing.Point(21, 81);
-            this.SingleSelectionRadio2.Name = "SingleSelectionRadio2";
-            this.SingleSelectionRadio2.Size = new System.Drawing.Size(523, 70);
-            this.SingleSelectionRadio2.TabIndex = 6;
-            this.SingleSelectionRadio2.Text = "Antwort 2";
-            this.SingleSelectionRadio2.UseVisualStyleBackColor = true;
-            // 
-            // SingleSelectionRadio3
-            // 
-            this.SingleSelectionRadio3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SingleSelectionRadio3.Location = new System.Drawing.Point(21, 157);
-            this.SingleSelectionRadio3.Name = "SingleSelectionRadio3";
-            this.SingleSelectionRadio3.Size = new System.Drawing.Size(523, 70);
-            this.SingleSelectionRadio3.TabIndex = 7;
-            this.SingleSelectionRadio3.Text = "Antwort 3";
-            this.SingleSelectionRadio3.UseVisualStyleBackColor = true;
-            // 
-            // SingleSelectionRadio4
-            // 
-            this.SingleSelectionRadio4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SingleSelectionRadio4.Location = new System.Drawing.Point(21, 233);
-            this.SingleSelectionRadio4.Name = "SingleSelectionRadio4";
-            this.SingleSelectionRadio4.Size = new System.Drawing.Size(523, 70);
-            this.SingleSelectionRadio4.TabIndex = 8;
-            this.SingleSelectionRadio4.Text = "Antwort 4";
-            this.SingleSelectionRadio4.UseVisualStyleBackColor = true;
-            // 
-            // MultiSelectionBox2
-            // 
-            this.MultiSelectionBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MultiSelectionBox2.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultiSelectionBox2.Location = new System.Drawing.Point(21, 81);
-            this.MultiSelectionBox2.Name = "MultiSelectionBox2";
-            this.MultiSelectionBox2.Size = new System.Drawing.Size(523, 70);
-            this.MultiSelectionBox2.TabIndex = 2;
-            this.MultiSelectionBox2.TabStop = false;
-            this.MultiSelectionBox2.Text = "Das ist Antwortmöglichkeit 2";
-            this.MultiSelectionBox2.UseVisualStyleBackColor = false;
-            // 
-            // MultiSelectionBox3
-            // 
-            this.MultiSelectionBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MultiSelectionBox3.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultiSelectionBox3.Location = new System.Drawing.Point(21, 157);
-            this.MultiSelectionBox3.Name = "MultiSelectionBox3";
-            this.MultiSelectionBox3.Size = new System.Drawing.Size(523, 70);
-            this.MultiSelectionBox3.TabIndex = 3;
-            this.MultiSelectionBox3.TabStop = false;
-            this.MultiSelectionBox3.Text = "Das ist Antwortmöglichkeit 3";
-            this.MultiSelectionBox3.UseVisualStyleBackColor = false;
-            // 
-            // MultiSelectionBox4
-            // 
-            this.MultiSelectionBox4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MultiSelectionBox4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultiSelectionBox4.Location = new System.Drawing.Point(21, 233);
-            this.MultiSelectionBox4.Name = "MultiSelectionBox4";
-            this.MultiSelectionBox4.Size = new System.Drawing.Size(523, 70);
-            this.MultiSelectionBox4.TabIndex = 4;
-            this.MultiSelectionBox4.TabStop = false;
-            this.MultiSelectionBox4.Text = "Das ist Antwortmöglichkeit 4";
-            this.MultiSelectionBox4.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
